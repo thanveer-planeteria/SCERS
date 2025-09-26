@@ -1,0 +1,304 @@
+$breakpoints:( "xs":0, "sm":480px, "md":768px, "lg":992px, "xl":1200px, );
+@mixin xl {
+    @media( min-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media( min-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media( max-width: map-get($breakpoints, 'md')) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media( max-width: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+}
+
+@mixin desk {
+    @media( min-width: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+}
+
+@mixin desklg {
+    @media( min-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (min-width: 768px) and (max-width: map-get($breakpoints, "lg") - 1) {
+        @content;
+    }
+}
+
+@mixin max-lg {
+    @media (max-width: 1199.9px) {
+        @content;
+    }
+}
+
+//ini custom breakpoints
+@mixin breakpoint($bp:0) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+//Mixins
+@mixin all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin primary-font {
+    font-family: 'Franklin Gothic Demi';
+}
+
+@mixin secondary-font {
+   font-family: 'Source Sans Pro';
+}
+
+@mixin upper {
+    text-transform: uppercase;
+}
+
+@mixin regular {
+    font-weight: 400;
+}
+
+@mixin medium {
+    font-weight: 500;
+}
+
+@mixin semi {
+    font-weight: 600;
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+@mixin dflex {
+    display: flex;
+}
+
+@mixin underline {
+    text-decoration: underline;
+}
+
+@mixin dfw {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin img-white {
+    filter: brightness(0) invert(1);
+}
+
+@mixin rotate {
+    transform: rotate(180deg);
+}
+
+@mixin img-green {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(78%) saturate(5573%) hue-rotate(149deg) brightness(94%) contrast(99%);
+}
+
+@mixin img-black {
+    filter: brightness(0) saturate(100%) invert(1%) sepia(77%) saturate(1660%) hue-rotate(166deg) brightness(90%) contrast(102%);
+}
+
+@mixin img-blue {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(12%) saturate(4774%) hue-rotate(193deg) brightness(95%) contrast(96%);
+}
+@font-face {
+    font-family: 'Franklin Gothic Demi';
+    src: url('../fonts/FranklinGothic-Demi.woff2') format('woff2'),
+        url('../fonts/FranklinGothic-Demi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-BlackIt.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-BlackIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Black.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-ExtraLight.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-BoldIt.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-BoldIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-ExtraLightIt.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-ExtraLightIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Light.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Semibold.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-It.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-It.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-LightIt.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-LightIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-SemiboldIt.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-SemiboldIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+//Variables
+$primary:#557122;
+$secondary:#AD5816;
+$orange:#EA8C1C;
+$yellow:#ECAF3B;
+$border-color:#D8612E;
+$darkblue:#003C60;
+$lightblue:#F0F5FB;
+$red:#D60004;
+$red-hover:#C50105;
+$hover-green:#345719;
+$green:#5B7E15;
+$blue:#004B8F;
+$purple:#7A4090;
+$bg-blue:#14213f;
+$black:#000;
+$white:#ffffff;
+$gray:#555554;
+$base-blue:#00689B;
+$lightgray:#E9E9E9;
+$lightgray2:#F6F3EE;
+$primary-font: 'Franklin Gothic Demi';
+$secondary-font: 'Source Sans Pro';
+$shadow:0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+// color paltte - 
+$colors:( "primary":$primary, "secondary":$secondary, "green":#008943, "black":#000, "lightgray":#F5F5F5);
+.test-btn {
+    background-color: map-get($colors, "blue");
+}
+
+@mixin fancy-border($size:1px, $color:#000) {
+    border: $size solid $color;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

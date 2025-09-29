@@ -1,7 +1,7 @@
 //componenets (button, anchor tags, heading tags etc)
 body {
     color: $black;
-    font-size: 16px;
+    font-size: 18px;
     @include secondary-font;
     &.wp-admin {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -82,8 +82,8 @@ h6,
 }
 
 p {
-    line-height: 24px;
-    font-size: 16px;
+    line-height: normal;
+    font-size: 18px;
     font-weight: normal;
     color: $black;
     @include secondary-font;
@@ -96,7 +96,7 @@ p.has-large-font-size {
 
 p+ul,
 p+ol {
-    margin-top: -15px;
+    // margin-top: -15px;
 }
 
 a {
@@ -110,10 +110,11 @@ a {
 }
 
 p a {
-    color: #005598;
+    color: $darkblue;
     font-weight: 600;
+    text-decoration: underline;
     &:hover {
-        color: #14213f;
+        color: #00689B;
         text-decoration: underline;
     }
 }
@@ -124,7 +125,14 @@ b,
 strong {
     font-weight: 700;
 }
-
+label{
+    color: var(--neutral-black, #000);
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 //general rules
 .link {
     font-size: 16px;
@@ -147,13 +155,13 @@ strong {
 
 .btn_sm {
     color: $white;
-    padding: 12px 24px;
+    padding: 11px 24px;
     display: inline-flex;
     text-align: center;
     position: relative;
     background: none;
     font-family: $secondary-font;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     font-weight: 700;
     background-color: $primary;
@@ -163,6 +171,7 @@ strong {
     justify-content: center;
     column-gap: 8px;
     align-items: center;
+    line-height: normal;
     cursor: pointer;
     &:hover,
     &:focus-within {
@@ -194,7 +203,7 @@ video {
 }
 
 .form-control {
-    min-height: 40px;
+    min-height: 45px;
     background-color: $white;
     border: 1px solid #000;
     border-radius: 5px;
@@ -212,19 +221,19 @@ video {
 }
 
 select {
-    min-height: 40px;
+    min-height: 45px;
     background-image: url(../img/select-arrow.svg);
     background-repeat: no-repeat;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-position: top 14px right 12px;
+    background-position: top 18px right 14px;
     min-width: 130px;
     background-size: 18px;
     color: $black;
     border: 1px solid #000;
     border-radius: 5px;
     &.form-control {
-        color: #555554;
+        color: #63554D;
         cursor: pointer;
     }
 }
@@ -260,7 +269,6 @@ select {
 
 label.title {
     font-weight: 700;
-    @include primary-font;
 }
 
 ::-webkit-input-placeholder {
@@ -412,3 +420,4 @@ label.title {
     .custom-option.selection {
       text-decoration: underline;
     }
+

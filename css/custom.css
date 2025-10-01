@@ -187,7 +187,8 @@ p.has-large-font-size {
 
 a {
   color: #003C60;
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: underline;
 }
 a:hover {
   color: #00689B;
@@ -288,6 +289,7 @@ video {
   background-color: #ffffff;
   border: 1px solid #000;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .no-margin {
@@ -342,36 +344,42 @@ select.form-control {
 .search-box :-moz-placeholder {
   color: #000;
 }
+.search-box .search_input {
+  padding-left: 48px;
+  background-image: url(../img/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: left 14px top 10px;
+}
 
 label.title {
   font-weight: 700;
 }
 
 ::-webkit-input-placeholder {
-  color: #36393f !important;
+  color: #63554D !important;
   opacity: 1 !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   font-weight: normal !important;
 }
 
 ::-moz-placeholder {
-  color: #36393f !important;
+  color: #63554D !important;
   opacity: 1 !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   font-weight: normal !important;
 }
 
 :-ms-input-placeholder {
-  color: #36393f !important;
+  color: #63554D !important;
   opacity: 1 !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   font-weight: normal !important;
 }
 
 :-moz-placeholder {
-  color: #36393f !important;
+  color: #63554D !important;
   opacity: 1 !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   font-weight: normal !important;
 }
 
@@ -504,6 +512,16 @@ label.title {
 .custom-option:hover,
 .custom-option.selection {
   text-decoration: underline;
+}
+
+.col_left {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.col_right {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .main_header {
@@ -2685,38 +2703,22 @@ p.date {
   filter: brightness(0) saturate(100%) invert(17%) sepia(70%) saturate(7042%) hue-rotate(342deg) brightness(87%) contrast(114%);
 }
 
-.content_row {
-  display: grid;
-  grid-template-columns: 330px auto;
-  grid-column-gap: 48px;
-}
-.content_row .sidebar_main {
-  background: #F5F5F5;
-  padding: 40px;
-}
 .content_row .sidebar_main h2 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0px;
 }
 .content_row .sidebar_main .sidebar_menu {
   list-style: none;
   padding-left: 0px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.content_row .sidebar_main .sidebar_menu li {
-  border-bottom: 1px solid #BBBDB7;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .content_row .sidebar_main .sidebar_menu li a {
-  color: #14213F;
   font-size: 18px;
-  font-weight: 800;
-  display: grid;
-  grid-template-columns: 30px auto;
+  font-weight: 700;
   padding: 8px 0px;
-}
-.content_row .sidebar_main .sidebar_menu li a:hover {
-  color: #005598;
 }
 .content_row .sidebar_main .contact_box {
   box-shadow: none;
@@ -2726,7 +2728,7 @@ p.date {
 }
 .content_row .right_content {
   padding-right: 48px;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 .content_row .right_content .document_era,
@@ -4189,6 +4191,180 @@ p.date {
   font-size: 18px;
   line-height: normal;
   text-decoration: underline;
+}
+
+.proc_wrap {
+  margin-bottom: 40px;
+}
+
+.proc_filter form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+.acccard {
+  margin-bottom: 18px;
+}
+.acccard .acctitle {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #EBEBEB;
+  background: var(--White, #FFF);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.acccard .acctitle h3 {
+  font-size: 18px;
+  font-family: "Franklin Gothic Demi";
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.acccard .acctitle .category {
+  font-size: 16px;
+  color: #63554D;
+  font-weight: 600;
+}
+.acccard .acctitle p {
+  margin: 0px;
+}
+.acccard .acctitle p strong {
+  font-weight: 700;
+}
+.acccard .acctitle .acco_sign {
+  margin-left: 15px;
+  display: flex;
+}
+.acccard .acctitle .acco_sign img {
+  width: 18px;
+}
+.acccard .acctitle.active .acco_sign img {
+  transform: rotate(180deg);
+}
+.acccard .acctitle:hover h3 {
+  text-decoration: underline;
+  color: #345719;
+}
+.acccard .acc_right {
+  display: flex;
+}
+.acccard .acc_right p {
+  margin: 0px;
+}
+.acccard .document_era {
+  margin-bottom: 20px;
+}
+.acccard .rt_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 8px;
+}
+.acccard .rt_content p {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.accpanel {
+  padding: 24px 16px;
+  display: none;
+}
+.accpanel p {
+  margin-bottom: 15px;
+}
+.accpanel h4 {
+  font-size: 16px;
+}
+.accpanel .btn_sm {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.directory_table_wraper {
+  border-radius: 5px;
+  width: 100%;
+  overflow-y: auto;
+  border: 0.5px solid var(--neutral-base, #9D948E);
+}
+.directory_table_wraper table {
+  border-radius: 5px;
+  width: 100%;
+}
+.directory_table_wraper table tr:nth-child(odd) td {
+  background: #F1F1F1;
+}
+.directory_table_wraper table tr td {
+  border-right: 0.5px solid var(--neutral-base, #9D948E);
+  padding: 16px;
+}
+.directory_table_wraper table tr td:last-child {
+  border-right: none;
+}
+.directory_table_wraper table tr th {
+  border-right: 0.5px solid var(--neutral-base, #9D948E);
+  padding: 16px;
+  line-height: normal;
+  font-size: 21px;
+  font-family: "Franklin Gothic Demi";
+}
+.directory_table_wraper table tr th:last-child {
+  border-right: none;
+}
+.directory_table_wraper table tr th:first-child {
+  min-width: 570px;
+}
+.directory_table_wraper table thead tr {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.directory_filter .search-box {
+  margin-bottom: 16px;
+}
+.directory_filter .reset {
+  margin-top: 24px;
+}
+
+.rt_sidebar {
+  border-radius: 10px;
+  background: var(--neutral-lighter, #F6F3EE);
+  padding: 24px;
+}
+.rt_sidebar h3 {
+  margin-bottom: 16px;
+}
+.rt_sidebar .btn_sm {
+  margin-top: 8px;
+}
+
+.three_col_template .newsRow .newsColumn {
+  width: 50%;
+}
+.three_col_template .img_btn_col {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.two_col_template .newsRow .newsColumn {
+  width: 33.33%;
+}
+.two_col_template .img_btn_col {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.one_col_template .newsRow .newsColumn {
+  width: 25%;
+}
+.one_col_template .img_btn_col {
+  width: 250%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
 .gray,

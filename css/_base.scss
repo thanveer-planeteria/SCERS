@@ -101,7 +101,8 @@ p+ol {
 
 a {
     color: $darkblue;
-    font-weight: 600;
+    font-weight: 700;
+    text-decoration: underline;
     &:hover {
         color: $base-blue;
         text-decoration: underline;
@@ -207,6 +208,7 @@ video {
     background-color: $white;
     border: 1px solid #000;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 .no-margin {
@@ -265,6 +267,12 @@ select {
      :-moz-placeholder {
         color: #000;
     }
+    .search_input{
+        padding-left: 48px;
+        background-image: url(../img/search-icon.svg);
+        background-repeat: no-repeat;
+            background-position: left 14px top 10px;
+    }
 }
 
 label.title {
@@ -272,30 +280,30 @@ label.title {
 }
 
 ::-webkit-input-placeholder {
-    color: #36393f !important;
+    color: #63554D !important;
     opacity: 1 !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-weight: normal !important;
 }
 
 ::-moz-placeholder {
-    color: #36393f !important;
+    color: #63554D !important;
     opacity: 1 !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-weight: normal !important;
 }
 
 :-ms-input-placeholder {
-    color: #36393f !important;
+    color: #63554D !important;
     opacity: 1 !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-weight: normal !important;
 }
 
 :-moz-placeholder {
-    color: #36393f !important;
+    color: #63554D !important;
     opacity: 1 !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-weight: normal !important;
 }
 .mt-40{
@@ -419,5 +427,13 @@ label.title {
     .custom-option:hover,
     .custom-option.selection {
       text-decoration: underline;
+    }
+    .col_left{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .col_right{
+        padding-left: 16px;
+        padding-right: 16px;
     }
 

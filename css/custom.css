@@ -4310,6 +4310,10 @@ p.date {
   line-height: normal;
   font-size: 21px;
   font-family: "Franklin Gothic Demi";
+  background-image: url(../img/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px top 20px;
+  padding-right: 42px !important;
 }
 .directory_table_wraper table tr th:last-child {
   border-right: none;

@@ -2641,6 +2641,10 @@ border-radius: 10px 0 0 10px;
                 line-height: normal;
                 font-size: 21px;
                 font-family: $primary-font;
+                background-image: url(../img/arrow-up.svg);
+                background-repeat: no-repeat;
+                background-position: right 16px top 20px;
+                padding-right: 42px !important;
                 &:last-child{
                     border-right: none;
                 }
